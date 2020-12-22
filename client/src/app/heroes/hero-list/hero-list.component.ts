@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Hero } from 'src/app/_models/hero';
 import { HeroesService } from 'src/app/_services/heroes.service';
 
@@ -8,18 +9,11 @@ import { HeroesService } from 'src/app/_services/heroes.service';
   styleUrls: ['./hero-list.component.css']
 })
 export class HeroListComponent implements OnInit {
-  heroes: Hero[];
+  heroes$: Observable<Hero[]>;
 
   constructor(private heroService: HeroesService) { }
 
   ngOnInit(): void {
-    this.loadHeroes();
+    this.heroes$ = this.heroService.getHeroes();
   }
-
-  loadHeroes() {
-    this.heroService.getHeroes().subscribe(heroes => {
-      this.heroes = heroes;
-    })
-  }
-
 }
