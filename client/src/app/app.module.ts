@@ -23,6 +23,7 @@ import { HeroCardComponent } from './heroes/hero-card/hero-card.component';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { HeroEditComponent } from './heroes/hero-edit/hero-edit.component';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+import { PhotoEditorComponent } from './heroes/photo-editor/photo-editor.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     ServerErrorComponent,
     HeroCardComponent,
     HeroEditComponent,
+    PhotoEditorComponent,
   ],
   imports: [
     CommonModule,
