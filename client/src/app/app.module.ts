@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
@@ -24,6 +24,8 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { HeroEditComponent } from './heroes/hero-edit/hero-edit.component';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './heroes/photo-editor/photo-editor.component';
+import { TextInputComponent } from './_forms/text-input/text-input.component';
+import { DateInputComponent } from './_forms/date-input/date-input.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { PhotoEditorComponent } from './heroes/photo-editor/photo-editor.compone
     HeroCardComponent,
     HeroEditComponent,
     PhotoEditorComponent,
+    TextInputComponent,
+    DateInputComponent,
   ],
   imports: [
     CommonModule,
@@ -49,6 +53,7 @@ import { PhotoEditorComponent } from './heroes/photo-editor/photo-editor.compone
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     SharedModule,
   ],
   providers: [
